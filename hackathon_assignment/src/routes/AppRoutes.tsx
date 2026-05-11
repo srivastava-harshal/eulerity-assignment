@@ -1,15 +1,10 @@
-// routes/AppRoutes.tsx
 import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import { usePets } from '../hooks/usePets';
 import PetDetail from '../pages/PetDetail/PetDetail';
 import styled from 'styled-components';
 
-const AppContainer = styled.div`
-        display: 'flex';
-        flexDirection: 'column'; 
-        alignItems: 'center';
-      `;
+const AppContainer = styled.div``;
 
 function AppRoutes() {
      const { pets, loading, error } = usePets();

@@ -1,4 +1,3 @@
-// hooks/usePets.ts
 import { useEffect, useState } from 'react';
 import { fetchPets } from '../api/petsApi';
 import type { Pet } from '../types/pet';
@@ -25,5 +24,5 @@ export function usePets() {
           }
      }
 
-     return { pets, loading, error, setPets };
+     return { pets, loading, error };
 };

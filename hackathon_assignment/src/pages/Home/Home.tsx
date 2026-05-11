@@ -3,25 +3,10 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Toolbar from '../../components/Toolbar/Toolbar';
 import ImageList from '../../components/ImageList/ImageList';
-import styled from 'styled-components';
 import useInfiniteScroll from '../../hooks/useInfinitescroll';
 import useDebounce from '../../hooks/useDebounce';
 
 const PAGE_SIZE = 8;
-
-const PaginationButton = styled.button`
-     padding: 10px 15px;
-     margin: 25px 0;
-     background-color: #a5a5e9;
-     border: 0;
-     border-radius: 4px;
-     font-weight: 400;
-     cursor: pointer;
-
-     &:hover {
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-     }
-`;
 
 function Home({ pets, loading, error }) {
      const [query, setQuery] = useState('');

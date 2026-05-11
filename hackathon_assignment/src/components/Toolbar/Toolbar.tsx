@@ -19,6 +19,7 @@ const ToolbarContainer = styled.div`
      gap: 20px;
      justify-content: center;
      align-items; center;
+     flex-wrap: wrap;
 `;
 
 const Select = styled.select`
@@ -77,7 +78,7 @@ function Toolbar({ pets, sort, setSort }: Props) {
 
      return (
           <ToolbarContainer>
-               <Select value={sort} onChange={(e) => setSort(e.target.value)}>
+               <Select id='sort_select' value={sort} onChange={(e) => setSort(e.target.value)}>
                     <option value="">Sort</option>
                     <option value="AZ">Name A-Z</option>
                     <option value="ZA">Name Z-A</option>

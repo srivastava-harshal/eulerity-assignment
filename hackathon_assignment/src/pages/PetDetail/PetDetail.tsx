@@ -10,15 +10,12 @@ const StyledImage = styled.img`
 
 function PetDetail() {
      const { id } = useParams();
-
      const location = useLocation();
      const petFromState = location.state?.pet;
 
      const { pets, loading, error } = usePets();
 
-     const pet =
-          petFromState ||
-          pets.find((p) => String(p.title) === id);
+     const pet = petFromState || pets.find((p) => String(p.title) === id);
 
      if (loading && !petFromState) return <div>Loading...</div>;
      if (error) return <div>Error</div>;

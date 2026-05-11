@@ -25,8 +25,7 @@ const SearchBar = ({ query, setQuery }: SearchBarProps) => {
      return (
           <SearchBarContainer>
                <SearchForm>
-                    <label>Search Image: </label>
-                    <SearchInput type="text" value={query} onChange={({ target }) => setQuery(target.value)} />
+                    <label>Search Image: <SearchInput name="query" type="text" value={query} onChange={({ target }) => setQuery(target.value)} /></label>
                </SearchForm>
           </SearchBarContainer>
      )
